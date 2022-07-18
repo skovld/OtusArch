@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otusarch-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: otusarch-app
+  template:
+    metadata:
+      labels:
+        app: otusarch-app
+    spec:
+      containers:
+      - name: otusarch-backend
+        image: skvlsk/otusmicro:otusarch
+        ports:
+        - containerPort: 8000
