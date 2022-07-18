@@ -15,5 +15,5 @@ spec:
                 name: otusarch-app
                 port:
                   number: 8000
-            path: /health
+            path: /
             pathType: Prefix
